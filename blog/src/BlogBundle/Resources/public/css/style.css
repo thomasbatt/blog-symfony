@@ -1,0 +1,230 @@
+  
+/* we push the content down some and clean up the edges on mobile devices */
+@media (max-width: 767px) {
+    .content {
+      padding: 15px;
+      margin-top: 100px;
+    }
+    #navbar-right {
+      float: right;
+      width: 0px; /* You can adjust the width to your liking, just remember to also adjust the content margin below accordingly */
+      height: 0px;
+    }
+}
+ 
+/* When we were on larger screen sizes we can show our vertical menu bar */
+@media (min-width: 768px) {
+    /* clean up some of the default Bootstrap styles for panels in the menu */
+    #menu-bar .panel {
+      margin-bottom: 0;
+      border: none;
+      border-radius: 0;
+      -webkit-box-shadow: none;
+      -box-shadow: none;
+    }
+ 
+    #navbar-left{
+      float: left;
+      width: 200px; /* You can adjust the width to your liking, just remember to also adjust the content margin below accordingly */
+      height: 100%;
+    }
+    #navbar-right {
+      float: right;
+      width: 150px; /* You can adjust the width to your liking, just remember to also adjust the content margin below accordingly */
+      height: 100%;
+    }
+ 
+    .content {
+      margin: 0 0px 0 200px; /* If you adjusted the width above you will need to adjust this as well */
+      min-height: 100%;
+    }
+ 
+    .container {
+      /*margin: 0px 25px;*/
+      width: 100%;
+    }
+}
+.site-title{
+  margin-bottom: 20px;
+}
+
+a:hover .site-title {
+  color: #fff;
+}
+
+.login-title{
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.navbar-btn{
+  margin: 5px 0;
+  padding: 0 7px;
+}
+
+.container {
+  max-width: 750px;
+}
+
+.nav {
+  margin-bottom: 30px;
+}
+.navbar-form{
+  text-align: center;
+  font-size: 10px;
+  margin-bottom: 20px;
+}
+
+.navbar-form .form-control {
+  width: 80%;
+  height: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 0;
+}
+
+.form-nav .btn{
+  font-size: 10px;
+}
+
+.navbar-header {
+  float: none;
+  text-align: center;
+}
+
+.navbar-collapse.collapse {
+  color: #EEEEEE;
+}
+
+.navbar-fixed-top-left {
+  position: fixed;
+  right: 0px;
+  left: 0px;
+  z-index: 1030;
+}
+
+.navbar-fixed-top-right {
+  position: fixed;
+  right: 0px;
+  /*left: 0px;*/
+  z-index: 1030;
+  top: 0px;
+}
+
+.container {
+  padding-top: 0px;
+  padding-left: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 30px;
+}
+
+a {
+  color: #EEEEEE;
+  text-decoration: none;
+  text-align: center;
+}
+
+
+a:focus, a:hover {
+  color: #333;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.article a{
+  color: #333;
+}
+
+.article a:hover{
+  color: #020202;
+}
+
+.nav > li > a{
+  text-transform: uppercase;
+}
+
+.login-list{
+  text-transform: capitalize;    
+}
+
+.form_create_message{
+  display: inline-block;
+}
+
+li .login-list a, li .login-list span{
+  display: inline-block;
+}
+
+.message{
+  /*margin-bottom: 30px;*/
+}
+
+.right{
+  display: inline-block;
+  background-color: rgba(94, 181, 42, 0.51);
+  border-radius: 6px;
+  padding: 5px 15px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.left{
+  display: inline-block;
+  background-color: #EEE;
+  border-radius: 6px;
+  padding: 5px 15px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.name-message{
+  font-size: 11px;
+  padding-bottom: 2px;
+  text-transform: capitalize;
+  font-weight: 1000;
+}
+
+.heure-message{
+  /*margin-top: 5px;*/
+  font-size: 9px;
+}
+
+.article-title{
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.article-title .title{
+  display: inline-block;
+  width: 50%;
+  font-weight: 700;
+}
+
+.article-title .date{
+  display: inline-block;
+  width: 49%;
+  font-size: 10px;
+}
+
+.article-content{
+  color: #5F5F5F;
+  text-align: justify;
+}
+
+.modal-header {
+    padding: 10px 15px 0 15px;
+}
+
+.copyright-text{
+  font-size: 10px;
+}
+
+
+/*
+
+.message .jumbotron{
+}
+
+.message .jumbotron.connected {
+}*/

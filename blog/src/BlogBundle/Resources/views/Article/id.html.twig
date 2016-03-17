@@ -1,0 +1,15 @@
+<div class="article">
+	<div class="article-title">
+		<div class="title"><a href="{{ path('article_display_title', {title:article.title}) }}"> N°{{ article.id }} - {{ article.title }}</a></div>
+		<div class="date text-right">{{ article.author.username }} le {{ article.date|date('m-d-Y') }}</div>
+	</div>
+	<div class="article-content">
+		<p >{{ article.content }}</p>
+	</div>
+</div>
+
+{# {{ article.date|date('m-d-Y à H:i:s') }} #}
+
+	
+	
+	

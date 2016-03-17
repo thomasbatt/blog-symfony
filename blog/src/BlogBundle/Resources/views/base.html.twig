@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Mon premier Symfony!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/blog/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/blog/css/bootstrap-theme.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/blog/css/style.css') }}">
+        <script type="text/javascript" src="{{ asset('bundles/blog/scripts/jquery.min.js') }}"></script>
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <script type="text/javascript" src="{{ asset('bundles/blog/scripts/bootstrap.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/blog/scripts/script.js') }} "></script>
+    </head>
+    <body>
+        <div class="row">
+            {% include 'BlogBundle:Article:header.html.twig' %}
+        </div>
+        <div class="row">
+            <div class="clearfix"></div>
+            <div class="content">
+                <div class="container">
+                    <div class="row">
+                        {% block content %}{% endblock %}
+                        <div class="scrollup"></div>
+                    </div>
+                    <div class="copyright-text text-right">
+                        © ThomCompany 2016
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% include 'BlogBundle:Article:footer.html.twig' %}
+        </div>
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

@@ -1,0 +1,24 @@
+{% extends 'BlogBundle:base.html.twig' %}
+{% block content %}
+	<article class="row article">
+		<div class="col-sm-4">
+			<center>
+				<a href="http://placehold.it/1280X720" target="_blank">
+					<img src="http://placehold.it/1280X720" class="img-responsive articleimg">
+				</a>
+			</center>
+		</div>
+		<div class="col-sm-8">
+			<a href="{{ path('article_display', {title:article.title}) }}">
+				<h3 class="title">
+					{{ article.title }}
+				</h3>
+			</a>
+	      	<p class="text-muted">{{ article.date|date('d\-m\-Y H:i:s') }}</p>
+			<div class="in_article">
+				<p>{{ article.content }}</p>
+			</div>
+			<p class="text-muted">Written by <a target="_blank" href="http://lmgtfy.com/?q=page+de+profile+mvc">{{ article.author }}</a></p>
+		</div>
+	</article>
+{% endblock %}

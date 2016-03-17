@@ -1,0 +1,9 @@
+<div class="article">
+	<div class="article-title">
+		<div class="title">N°{{ comment.id }} - {{ comment.author.username }}</div>
+		<div class="date text-right">{{ comment.date|date('m-d-Y à H:i:s') }}</div>
+	</div>
+	<div class="article-content">
+		<p >{{ comment.content }}</p>
+	</div>
+</div>

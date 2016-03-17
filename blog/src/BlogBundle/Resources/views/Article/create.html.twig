@@ -1,0 +1,26 @@
+<div class="col-xs-12">
+	<div class="jumbojumbotron-container">
+		<div >
+		  <div class="modal-header">
+		    <h2 class="modal-title" id="modal-label-register">Nouvel Article</h2>
+		  </div>
+		  <div class="modal-body">
+		  	<form method="post">
+				<div class="form-group">
+					<label for="titre">titre</label>
+					<input type="text" class="form-control" id="titre" name="{{ form.title.vars.full_name }}" value="{{ form.title.vars.value }}">
+				</div>
+				<div class="form-group">
+					<label for="content">Contenu</label>
+					<textarea class="form-control" id="content" name="{{ form.content.vars.full_name }}">le contenu de l'article</textarea>
+				</div>
+				<button type="submit" class="btn btn-success" name="{{ form.submit.vars.full_name }}" value="{{ form.submit.vars.value }}">VALIDER</button>
+				{{ form(form._token) }}
+			</form>
+{# 				{{ form(form) }}
+				{{ form_widget(form) }}
+				{{ dump(form.title) }} #}
+		  </div>
+		</div>
+	</div>
+</div>

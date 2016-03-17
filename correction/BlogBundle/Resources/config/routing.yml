@@ -1,0 +1,17 @@
+blog_homepage:
+    path:     /
+    defaults: { _controller: BlogBundle:Article:displayAll }
+
+article_create:
+    path:     /article/create
+    defaults: { _controller: BlogBundle:Article:create }
+
+article_display_id:
+    path:     /article/{id}
+    defaults: { _controller: BlogBundle:Article:displayById }
+    requirements:
+        id:  \d+
+
+article_display:
+    path:     /article/{title}
+    defaults: { _controller: BlogBundle:Article:displayByTitle }

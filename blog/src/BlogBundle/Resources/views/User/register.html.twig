@@ -1,0 +1,13 @@
+{% extends 'BlogBundle:base.html.twig' %}
+{% block content %}
+<div class="col-xs-12">
+	<div class="jumbotron-container">
+	  <div class="modal-header">
+	    <h2 class="modal-title" id="modal-label-register">Inscription</h2>
+	  </div>
+	  <div class="modal-body">
+		{{ render(controller('FOSUserBundle:Registration:register')) }}
+	  </div>
+	</div>
+</div>
+{% endblock %}

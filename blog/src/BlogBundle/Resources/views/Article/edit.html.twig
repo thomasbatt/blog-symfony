@@ -1,0 +1,12 @@
+{% extends 'BlogBundle::base.html.twig' %}
+{% block content %}
+<div>
+	Mon premier EDITER!
+	<form method="post">
+		<label for="content"></label>
+		<input type="text" id="content" name="content" value="mon contenu"></input>
+		<button type="submit">EDITER</button>
+
+	</form>
+</div>
+{% endblock %}

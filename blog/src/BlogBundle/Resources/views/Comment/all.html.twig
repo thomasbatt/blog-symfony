@@ -1,0 +1,24 @@
+{# {% extends 'BlogBundle:base.html.twig' %}
+{% block content %} #}
+	<div class="col-xs-12">
+		<div class="jumbotron-container">
+			<div >
+			  <div class="modal-header">
+			    <h2 class="modal-title" >Commentaire</h2>
+			  </div>
+			  <div class="modal-body">
+				{# {{ dump(article.comments)}} #}
+
+				{% for comment in article.comments %}
+					{% include 'BlogBundle:Comment:id.html.twig' %}
+			    {% endfor %}
+			  </div>
+			</div>
+		</div>
+	</div>
+	{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+		{{ render(controller('BlogBundle:Comment:create', {'request':app.request, 'id':article.id } )) }}
+		{# {% include 'BlogBundle:Comment:create.html.twig' %} #}
+	{% endif %}
+{# {% endblock %} #}
+

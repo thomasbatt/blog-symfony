@@ -1,0 +1,45 @@
+blog_homepage:
+    path:     /
+    defaults: { _controller: BlogBundle:Article:index }
+
+user_register:
+    path:     /user/register
+    defaults: { _controller: BlogBundle:User:register }
+
+article_create:
+    path:     /article/create
+    defaults: { _controller: BlogBundle:Article:create }
+
+article_edit:
+    path:     /article/edit
+    defaults: { _controller: BlogBundle:Article:edit }
+
+article_all:
+    path:     /article/all
+    defaults: { _controller: BlogBundle:Article:all }
+
+comment_all:
+    path:     /comment/all
+    defaults: { _controller: BlogBundle:Comment:all }
+
+comment_create:
+    path:     /comment/create/{id}
+    defaults: { _controller: BlogBundle:Comment:create }
+
+article_remove:
+    path:     /article/remove
+    defaults: { _controller: BlogBundle:Article:remove }
+
+article_page:
+    path:     /article/page/page
+    defaults: { _controller: BlogBundle:Article:page }
+
+article_display_id:
+    path:     /article/{id}
+    defaults: { _controller: BlogBundle:Article:displayById }
+    requirements:
+        id:  \d+
+
+article_display_title:
+    path:     /article/{title}
+    defaults: { _controller: BlogBundle:Article:displayByTitle }

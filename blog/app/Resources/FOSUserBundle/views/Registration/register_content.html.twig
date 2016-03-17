@@ -1,0 +1,29 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+{# {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+    {{ form_widget(form) }} #}
+    	<form method="post" action="{{ path('fos_user_registration_register') }}" name="fos_user_registration_form">
+			<div class="form-group">
+				<label for="login">Login</label>
+				<input type="text" class="form-control" id="login" name="{{ form.username.vars.full_name }}" placeholder="Login">
+			</div>
+		 	<div class="form-group">
+		    	<label for="email">Entrez votre Email</label>
+		    	<input type="email" class="form-control" id="email" name="{{ form.email.vars.full_name }}" placeholder="login@mail.fr">
+		 	</div>
+			<div class="form-group">
+				<label for="password1">Mot de passe</label>
+				<input type="password" class="form-control" id="password1" name="{{ form.plainPassword.first.vars.full_name }}" placeholder="Mot de passe">
+			</div>
+			<div class="form-group">
+				<label for="password2">Retaper votre mot de passe</label>
+				<input type="password" class="form-control" id="password2" name="{{ form.plainPassword.second.vars.full_name }}" placeholder="Retaper votre mot de passe">
+			</div>
+			{# {{ form_error(form) }} #}
+		    <div>
+		        <input type="submit" class="btn btn-success" value="Créer votre compte" />
+		    </div>
+			{{ form(form._token) }}
+		</form>
+{#     {{ dump(form) }}
+{{ form_end(form) }} #}

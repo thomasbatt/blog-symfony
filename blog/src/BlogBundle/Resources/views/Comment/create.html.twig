@@ -1,0 +1,19 @@
+<div class="col-xs-12">
+	<div class="jumbojumbotron-container">
+		<div >
+		  <div class="modal-body">
+		  	<form method="post" action="{{ form.vars.action }}">
+				<div class="form-group">
+					<label for="content">Nouveau commentaire</label>
+					<textarea class="form-control" id="content" name="{{ form.content.vars.full_name }}">le contenu de l'commentaire</textarea>
+				</div>
+				<button type="submit" class="btn btn-success" name="{{ form.submit.vars.full_name }}" value="{{ form.submit.vars.value }}">VALIDER</button>
+				{{ form(form._token) }}
+			</form>
+{# 				{{ form(form) }}
+				{{ form_widget(form) }} #}
+				{# {{ dump(form.title) }} #}
+		  </div>
+		</div>
+	</div>
+</div>
